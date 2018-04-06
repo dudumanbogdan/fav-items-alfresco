@@ -9,9 +9,11 @@ import {
   MatCardModule,
   MatToolbarModule
 } from '@angular/material';
+import { PathNotFoundComponent } from './path-not-found/path-not-found.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, PathNotFoundComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
