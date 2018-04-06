@@ -12,13 +12,15 @@ import {
 import { PathNotFoundComponent } from './path-not-found/path-not-found.component';
 import { HomeComponent } from './home/home.component';
 import { ToolbarComponent } from './core/toolbar/toolbar.component';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
-  declarations: [AppComponent, PathNotFoundComponent, HomeComponent, ToolbarComponent],
+  declarations: [AppComponent, PathNotFoundComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
