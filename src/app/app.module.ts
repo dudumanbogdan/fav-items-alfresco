@@ -11,14 +11,15 @@ import {
 } from '@angular/material';
 import { PathNotFoundComponent } from './path-not-found/path-not-found.component';
 import { HomeComponent } from './home/home.component';
+import { ToolbarComponent } from './core/toolbar/toolbar.component';
 
 @NgModule({
-  declarations: [AppComponent, PathNotFoundComponent, HomeComponent],
+  declarations: [AppComponent, PathNotFoundComponent, HomeComponent, ToolbarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
+    MatToolbarModule,
     MatButtonModule
   ],
   providers: [],
