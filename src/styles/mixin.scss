@@ -1,0 +1,14 @@
+@import 'theme';
+
+$primary: mat-palette($mat-blue, 800);
+
+@mixin primary-color {
+  $primary-color: map-get($primary, 800);
+  color: $primary-color;
+}
+@mixin primary-background-contrast-color {
+  $primary-color: map-get($primary, 400);
+  $font-color: map-get(map-get($primary, contrast), 400);
+  background-color: $primary-color;
+  color: $font-color !important;
+}
