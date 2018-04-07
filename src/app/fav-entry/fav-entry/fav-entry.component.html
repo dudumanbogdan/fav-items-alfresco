@@ -1,6 +1,4 @@
 <div class="page-content">
-
-
   <mat-card *ngFor="let favEntry of favEntries">
     <mat-card-header>
       <mat-card-title>{{favEntry.name}}</mat-card-title>
@@ -22,7 +20,6 @@
               </span>
               <div class="text" *ngIf='favEntry.description'>{{favEntry.description}}</div>
               <div class="text">{{favEntry.createdAt | date: 'dd-MMM-yyyy HH:mm:ss'}}</div>
-              <!-- <div class="saying2">{{favEntry.modifiedAt | date: 'dd-MMM-yyyy HH:mm:ss'}}</div> -->
             </div>
           </div>
         </li>

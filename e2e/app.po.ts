@@ -2,10 +2,22 @@ import { browser, by, element } from 'protractor';
 
 export class AppPage {
   navigateTo() {
-    return browser.get('/');
+    return browser.get('/userFavEntries');
   }
 
-  getParagraphText() {
-    return element(by.css('alf-root h1')).getText();
+  pageContent() {
+    return element(by.css('.page-content'));
+  }
+
+  cards() {
+    return this.pageContent().all(by.tagName('mat-card'));
+  }
+
+  countElements() {
+    return this.cards().count();
+  }
+
+  deleteButtonElement() {
+    return element.all(by.className('delete-button'));
   }
 }
