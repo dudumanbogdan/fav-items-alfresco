@@ -1,0 +1,16 @@
+@import '../../../styles/mixin';
+
+.fav-entry-list-wrapper {
+  @include item-list;
+}
+
+.mat-card {
+  @include mat-card-layout;
+  box-sizing: border-box;
+}
+
+.fav-entry-list-wrapper{
+  .text {
+    display: inline;
+  }
+}

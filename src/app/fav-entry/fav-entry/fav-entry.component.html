@@ -1,3 +1,32 @@
-<p>
-  fav-entry works!
-</p>
+<div class="page-content">
+
+
+  <mat-card *ngFor="let favEntry of favEntries">
+    <mat-card-header>
+      <mat-card-title>{{favEntry.name}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ul class="fav-entry-list-wrapper">
+        <li class="item-container">
+          <button mat-button mat-suffix mat-icon-button color="accent" class="delete-button" aria-label="Delete" (click)="deleteFavEntry(favEntry)"
+            matTooltip="Delete the favEntry">
+            <i class="material-icons">delete</i>
+          </button>
+          <div class="selectable-item">
+            <div class="item-text">
+              <span *ngIf='favEntry.isFolder'>
+                <mat-icon>folder</mat-icon>
+              </span>
+              <span *ngIf='favEntry.isFile'>
+                <mat-icon>insert_drive_file</mat-icon>
+              </span>
+              <div class="text" *ngIf='favEntry.description'>{{favEntry.description}}</div>
+              <div class="text">{{favEntry.createdAt | date: 'dd-MMM-yyyy HH:mm:ss'}}</div>
+              <!-- <div class="saying2">{{favEntry.modifiedAt | date: 'dd-MMM-yyyy HH:mm:ss'}}</div> -->
+            </div>
+          </div>
+        </li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+</div>
